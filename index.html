@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="only screen and (max-width: 600px)" href="./style.css">
+    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="./website.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitLife Workout</title>
@@ -15,7 +15,7 @@
         <h2 style="color: rgb(69, 63, 63);">Welcome to FitLife Workout</h2>
         <p2 style="color: rgb(19, 9, 9);">Get Fit, Stay Healthy, Live Strong!</p2>
     </header>
-    <h4  class="text">Select Attributes:</h4>
+    <h4  class="text">Search Exercise</h4>
     <div class="container">
     <label  class="text">Category:</label>
     <select id="categoryDropdown" class="button-text" onchange="saveSelection('selectedCategory', this.value)">

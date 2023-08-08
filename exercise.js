@@ -66,11 +66,13 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 		  const card = document.createElement('div');
 		  card.classList.add('card');
 		  card.innerHTML = `
+		  <div>
 		  <h3 class="content tooltip" title="Details:${exercise.details}">${exercise.exercise_name}</h3>
 		  <ul style="list-style: disc; padding-left: 20px; text-align: left;">
 		  ${exercise.steps.map(step => `<li>${step}</li>`).join('')} 
 		  </ul>
 		  <a href="${exercise.videoURL}" target="_blank">Video Link</a>
+		  </div>
 		`;
 	
 		  document.getElementById('cards').appendChild(card);

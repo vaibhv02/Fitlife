@@ -67,8 +67,10 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 		  card.classList.add('card');
 		  card.innerHTML = `
 		  <h3 class="content tooltip" title="Details:${exercise.details}">${exercise.exercise_name}</h3>
-		  <li>${exercise.steps}</li>
-		  <a href="${exercise.videoURL}" target="_blank">Video Links</a>
+		  <ul style="list-style: disc; padding-left: 20px; text-align: left;">
+		  ${exercise.steps.map(step => `<li>${step}</li>`).join('')} 
+		  </ul>
+		  <a href="${exercise.videoURL}" target="_blank">Video Link</a>
 		`;
 	
 		  document.getElementById('cards').appendChild(card);
